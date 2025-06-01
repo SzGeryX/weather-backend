@@ -1,0 +1,5 @@
+venv/
+.env
+weather/db.sqlite3
+weather/app/__pycache__
+weather/weather/__pycache__
