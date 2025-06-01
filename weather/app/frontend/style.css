@@ -141,10 +141,10 @@ input[type=text] {
     }
     >h2>span, >h2{
         text-align: center;
-        color: black;
+        color: white;
         margin: auto;
         margin-top: 10xp;
-        font-size: xx-large;
+        font-size: 3rem;
     }
 }
 .modal {

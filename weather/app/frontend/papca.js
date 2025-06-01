@@ -223,8 +223,6 @@ changeBtn.addEventListener("click", () => {
 })
 
 function setCards() {
-  console.log(document.getElementById("myInput").value == "")
-  console.log(ip)
 fetch("http://127.0.0.1:8000/today/", { //erre az url-re kuldod a kerest, amivel neked foglalkozni kell az a "today/"-re es a "forecast/"-re vegzodo
   method: "POST",
   body: JSON.stringify({

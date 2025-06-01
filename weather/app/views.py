@@ -24,7 +24,6 @@ def index(req):
 @csrf_exempt
 def today(req):
     location = json.loads(req.body)["location"]
-    print(BASE + API["current"] + f"q={location}&" + API_KEY)
 
     c = requests.get(BASE + API["current"] + f"q={location}&" + API_KEY).json()
 
