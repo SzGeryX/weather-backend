@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Időjárás</title>
+</head>
+<body>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+          <button onclick="Close()" class="close">&times;</button>
+          <div id="modal-details"></div>
+        </div>
+    </div>
+    <div id="top">
+        <h1 id="weather">Időjárás</h1>
+        <div id="countries" >
+            <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="myCountry" placeholder="Location">
+            </div>
+            <button id="changeBtn">🔍</button>
+        </div>
+    </div>
+    <div id="day-holder">
+        <div class="days" id="first">
+            <h1>Ma</h1>
+            <img id="firstPic" src="{% static 'pics/3258157.png' %}" alt="weather pic">
+            <p>Hőmérséklet: <span id="tempNum1">55</span>°C</p>
+            <p>Csapadék Valószínűség: <span id="humNum1">4</span>%</p>
+            <button onclick="Day1More()">Részletek</button>
+        </div>
+        <div class="days">
+            <h1>Holnap</h1>
+            <img id="secondPic" src="{% static 'pics/3258157.png' %}" alt="weather pic">
+            <p>Hőmérséklet: <span id="tempNum2">55</span>°C</p>
+            <p>Csapadék Valószínűség: <span id="humNum2">4</span>%</p>
+            <button onclick="Day2More()">Részletek</button>
+        </div>
+        <div class="days">
+            <h1>Holnapután</h1>
+            <img id="thirdPic" src="{% static 'pics/3258157.png' %}" alt="weather pic">
+            <p>Hőmérséklet: <span id="tempNum3">55</span>°C</p>
+            <p>Csapadék Valószínűség: <span id="humNum3">4</span>%</p>
+            <button onclick="Day3More()">Részletek</button>
+        </div>
+    </div>
+    <script src="{% static 'papca.js' %}"></script>
+     <script>
+autocomplete(document.getElementById("myInput"));
+</script> 
+</body>
+</html>

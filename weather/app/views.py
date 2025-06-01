@@ -19,7 +19,7 @@ API = {
 }
 
 def index(req):
-    return HttpResponse("asd")
+    return render(req, "index.html")
 
 @csrf_exempt
 def today(req):
