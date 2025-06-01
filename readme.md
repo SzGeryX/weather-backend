@@ -4,7 +4,7 @@ python -m venv venv
 source venv/Scripts/activate
 pip install -r requirements.txt
 touch .env
-echo "API_KEY=<ide masold be az apikulcsot>"
+echo "API_KEY=<ide masold be az apikulcsot>" >> .env
 cd weather
 python manage.py runserver
 ```
