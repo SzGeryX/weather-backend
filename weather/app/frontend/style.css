@@ -139,6 +139,13 @@ input[type=text] {
         color: white;
         font-size: 80px;
     }
+    >h2>span, >h2{
+        text-align: center;
+        color: black;
+        margin: auto;
+        margin-top: 10xp;
+        font-size: xx-large;
+    }
 }
 .modal {
     position: fixed;

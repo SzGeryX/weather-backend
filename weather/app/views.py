@@ -31,11 +31,13 @@ def today(req):
     if "error" in c:
         return JsonResponse(c["error"])
 
+    location = c["location"]["name"]
     c = c["current"]
 
     a = requests.get(BASE + API["astronomy"] + f"q={location}&" + API_KEY).json()["astronomy"]["astro"]
 
     return JsonResponse({
+        "location": location,
         "last_updated": c["last_updated"],
         "temp": c["temp_c"],
         "feelslike": c["feelslike_c"],

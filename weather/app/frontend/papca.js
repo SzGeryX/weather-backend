@@ -1,6 +1,8 @@
 const modal = document.getElementById("modal")
 const modalContent = document.getElementById("modal-details")
 
+let currentLoc = document.getElementById("currentLoc")
+
 let ip = ""
 
  function autocomplete(inp) {
@@ -237,6 +239,7 @@ fetch("http://127.0.0.1:8000/today/", { //erre az url-re kuldod a kerest, amivel
   .then((data) => {
     //ide irod, hogy mit szeretnel az informacioval baszni amit a server visszakuldott 
     //ha egyesevel akarod az informaciokat kiszedni akkor az igy nez ki
+    currentLoc.innerText = data.location
     let firstPicEl = document.getElementById("firstPic");
     firstPicEl.src="http://" + data.condition_img;
     let tempNum1El = document.getElementById("tempNum1");
